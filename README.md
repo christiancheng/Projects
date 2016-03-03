@@ -1,4 +1,4 @@
-# Small-Projects
+# Projects
 This repo contains small projects and utilities that I made in my free time. 
 
 ## Dining Dollars
