@@ -12,7 +12,8 @@ import java.lang.*;
 public class DiningDollars {
 
     private static final double TOTAL_AMOUNT = 3255;
-    private static final double DAILY_ALLOWANCE = 14.08;
+    private static final double TOTAL_DAYS = 231;
+    private static final double DAILY_ALLOWANCE = TOTAL_AMOUNT / TOTAL_DAYS;
     private static final double QUARTER_WEEKS = 11;
 
     public static void main(String[] args) {
@@ -54,6 +55,9 @@ public class DiningDollars {
         // Calculate the current target and whether the user has extra
         day = ((currentWeek - 1) * 7) + day;
         currentTarget = TOTAL_AMOUNT - (DAILY_ALLOWANCE * day);
+        currentTarget = currentTarget * 100;
+        currentTarget = (double)((int)currentTarget);
+        currentTarget = currentTarget / 100;
         extra = currentTotal > currentTarget;
 
         // Difference between the current total and current target, rounded
